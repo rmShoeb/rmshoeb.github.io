@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
+    base: '/rmshoeb.github.io/',
     server: {
         port: 3000
     },
