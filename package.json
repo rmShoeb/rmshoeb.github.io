@@ -1,0 +1,19 @@
+{
+    "name": "ts-project-template",
+    "version": "1.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "preview": "vite preview"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "MIT",
+    "description": "",
+    "devDependencies": {
+        "@rollup/plugin-html": "^2.0.0",
+        "typescript": "^5.9.3",
+        "vite": "^7.1.7"
+    }
+}
