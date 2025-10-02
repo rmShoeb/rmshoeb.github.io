@@ -24,6 +24,8 @@ jobs:
         run: npm install
       - name: Build
         run: npm run build
+      - name: Copy .nojekyll
+        run: cp .nojekyll dist/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:

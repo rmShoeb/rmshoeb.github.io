@@ -1,11 +1,21 @@
-import { defineConfig } from 'vite';
+import { defineConfig } from 'vite'
 
 export default defineConfig({
-    base: '/rmshoeb.github.io/',
+    base: './',
     server: {
         port: 3000
     },
     assetsInclude: ['**/*.html'],
+    build: {
+        assetsDir: 'assets',
+        rollupOptions: {
+            output: {
+                entryFileNames: 'assets/[name].[hash].js',
+                chunkFileNames: 'assets/[name].[hash].js',
+                assetFileNames: 'assets/[name].[hash][extname]'
+            }
+        }
+    },
     plugins: [
         {
             name: 'html-template-loader',
@@ -19,4 +29,4 @@ export default defineConfig({
             }
         }
     ]
-});
+})
