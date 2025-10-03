@@ -5,7 +5,7 @@ export default defineConfig({
     server: {
         port: 3000
     },
-    assetsInclude: ['**/*.html'],
+    // assetsInclude: ['**/*.html'],
     build: {
         assetsDir: 'assets',
         rollupOptions: {
@@ -20,7 +20,11 @@ export default defineConfig({
         {
             name: 'html-template-loader',
             transform(code, id) {
-                if (id.endsWith('.html')) {
+                // Only transform HTML files that are imported from TypeScript
+                // Do NOT transform the root index.html
+                const isRootIndex = id.endsWith('index.html') && !id.includes('src') && !id.includes('components');
+
+                if (id.endsWith('.html') && !isRootIndex) {
                     return {
                         code: `export default ${JSON.stringify(code)}`,
                         map: null
@@ -29,4 +33,4 @@ export default defineConfig({
             }
         }
     ]
-})
+});
