@@ -1,5 +1,5 @@
 {
-    "name": "ts-project-template",
+    "name": "rmshoeb-portfolio-website",
     "version": "1.0.0",
     "type": "module",
     "scripts": {
@@ -8,7 +8,7 @@
         "preview": "vite preview"
     },
     "keywords": [],
-    "author": "",
+    "author": "rmShoeb",
     "license": "MIT",
     "description": "",
     "devDependencies": {
